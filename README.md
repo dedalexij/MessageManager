@@ -1,4 +1,4 @@
-MessageManager
+Manager
 
 hello world
 otlozhili reliz
