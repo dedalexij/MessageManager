@@ -1,0 +1,11 @@
+C:\Users\Ded\Desktop\MISIS\MessageManager\Backend\MessageManager\MessageManager\bin\Debug\netcoreapp2.0\MessageManagerWebAPI.deps.json
+C:\Users\Ded\Desktop\MISIS\MessageManager\Backend\MessageManager\MessageManager\bin\Debug\netcoreapp2.0\MessageManagerWebAPI.runtimeconfig.json
+C:\Users\Ded\Desktop\MISIS\MessageManager\Backend\MessageManager\MessageManager\bin\Debug\netcoreapp2.0\MessageManagerWebAPI.runtimeconfig.dev.json
+C:\Users\Ded\Desktop\MISIS\MessageManager\Backend\MessageManager\MessageManager\bin\Debug\netcoreapp2.0\MessageManagerWebAPI.dll
+C:\Users\Ded\Desktop\MISIS\MessageManager\Backend\MessageManager\MessageManager\bin\Debug\netcoreapp2.0\MessageManagerWebAPI.pdb
+C:\Users\Ded\Desktop\MISIS\MessageManager\Backend\MessageManager\MessageManager\obj\Debug\netcoreapp2.0\MessageManagerWebAPI.csprojResolveAssemblyReference.cache
+C:\Users\Ded\Desktop\MISIS\MessageManager\Backend\MessageManager\MessageManager\obj\Debug\netcoreapp2.0\MessageManagerWebAPI.csproj.CoreCompileInputs.cache
+C:\Users\Ded\Desktop\MISIS\MessageManager\Backend\MessageManager\MessageManager\obj\Debug\netcoreapp2.0\MessageManagerWebAPI.AssemblyInfoInputs.cache
+C:\Users\Ded\Desktop\MISIS\MessageManager\Backend\MessageManager\MessageManager\obj\Debug\netcoreapp2.0\MessageManagerWebAPI.AssemblyInfo.cs
+C:\Users\Ded\Desktop\MISIS\MessageManager\Backend\MessageManager\MessageManager\obj\Debug\netcoreapp2.0\MessageManagerWebAPI.dll
+C:\Users\Ded\Desktop\MISIS\MessageManager\Backend\MessageManager\MessageManager\obj\Debug\netcoreapp2.0\MessageManagerWebAPI.pdb
