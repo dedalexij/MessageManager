@@ -1,0 +1,9 @@
+C:\Users\Ded\Desktop\MISIS\MessageManager\Backend\MessageManager\MessageManagerLib\bin\Debug\netstandard2.0\MessageManagerLib.deps.json
+C:\Users\Ded\Desktop\MISIS\MessageManager\Backend\MessageManager\MessageManagerLib\bin\Debug\netstandard2.0\MessageManagerLib.dll
+C:\Users\Ded\Desktop\MISIS\MessageManager\Backend\MessageManager\MessageManagerLib\bin\Debug\netstandard2.0\MessageManagerLib.pdb
+C:\Users\Ded\Desktop\MISIS\MessageManager\Backend\MessageManager\MessageManagerLib\obj\Debug\netstandard2.0\MessageManagerLib.csprojResolveAssemblyReference.cache
+C:\Users\Ded\Desktop\MISIS\MessageManager\Backend\MessageManager\MessageManagerLib\obj\Debug\netstandard2.0\MessageManagerLib.csproj.CoreCompileInputs.cache
+C:\Users\Ded\Desktop\MISIS\MessageManager\Backend\MessageManager\MessageManagerLib\obj\Debug\netstandard2.0\MessageManagerLib.AssemblyInfoInputs.cache
+C:\Users\Ded\Desktop\MISIS\MessageManager\Backend\MessageManager\MessageManagerLib\obj\Debug\netstandard2.0\MessageManagerLib.AssemblyInfo.cs
+C:\Users\Ded\Desktop\MISIS\MessageManager\Backend\MessageManager\MessageManagerLib\obj\Debug\netstandard2.0\MessageManagerLib.dll
+C:\Users\Ded\Desktop\MISIS\MessageManager\Backend\MessageManager\MessageManagerLib\obj\Debug\netstandard2.0\MessageManagerLib.pdb
