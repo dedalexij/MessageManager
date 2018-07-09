@@ -3109,6 +3109,24 @@
           "lib/netstandard1.3/Serilog.dll": {}
         }
       },
+      "Serilog.Sinks.File/3.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Serilog": "2.3.0",
+          "System.IO": "4.1.0",
+          "System.IO.FileSystem": "4.0.1",
+          "System.IO.FileSystem.Primitives": "4.0.1",
+          "System.Text.Encoding.Extensions": "4.0.11",
+          "System.Threading": "4.0.11",
+          "System.Threading.Timer": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Serilog.Sinks.File.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Serilog.Sinks.File.dll": {}
+        }
+      },
       "Serilog.Sinks.PeriodicBatching/2.1.1": {
         "type": "package",
         "dependencies": {
@@ -3121,6 +3139,22 @@
         },
         "runtime": {
           "lib/netstandard1.2/Serilog.Sinks.PeriodicBatching.dll": {}
+        }
+      },
+      "Serilog.Sinks.RollingFile/3.3.1-dev-00771": {
+        "type": "package",
+        "dependencies": {
+          "Serilog.Sinks.File": "3.2.0",
+          "System.IO": "4.1.0",
+          "System.IO.FileSystem.Primitives": "4.0.1",
+          "System.Runtime.InteropServices": "4.1.0",
+          "System.Text.Encoding.Extensions": "4.0.11"
+        },
+        "compile": {
+          "lib/netstandard1.3/Serilog.Sinks.RollingFile.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Serilog.Sinks.RollingFile.dll": {}
         }
       },
       "Serilog.Sinks.Splunk/3.0.0-dev-00217": {
@@ -8267,6 +8301,19 @@
         "serilog.nuspec"
       ]
     },
+    "Serilog.Sinks.File/3.2.0": {
+      "sha512": "VHbo68pMg5hwSWrzLEdZv5b/rYmIgHIRhd4d5rl8GnC5/a8Fr+RShT5kWyeJOXax1el6mNJ+dmHDOVgnNUQxaw==",
+      "type": "package",
+      "path": "serilog.sinks.file/3.2.0",
+      "files": [
+        "lib/net45/Serilog.Sinks.File.dll",
+        "lib/net45/Serilog.Sinks.File.xml",
+        "lib/netstandard1.3/Serilog.Sinks.File.dll",
+        "lib/netstandard1.3/Serilog.Sinks.File.xml",
+        "serilog.sinks.file.3.2.0.nupkg.sha512",
+        "serilog.sinks.file.nuspec"
+      ]
+    },
     "Serilog.Sinks.PeriodicBatching/2.1.1": {
       "sha512": "L1iZtcEzQdEIYCPvhYJYB2RofPg+i1NhHJfS+DpXLyLSMS6OXebqaI1fxWhmJRIjD9D9BuXi23FkZTQDiP7cHw==",
       "type": "package",
@@ -8280,6 +8327,19 @@
         "lib/netstandard1.2/Serilog.Sinks.PeriodicBatching.xml",
         "serilog.sinks.periodicbatching.2.1.1.nupkg.sha512",
         "serilog.sinks.periodicbatching.nuspec"
+      ]
+    },
+    "Serilog.Sinks.RollingFile/3.3.1-dev-00771": {
+      "sha512": "ZqT4qp+BIEOYloDodia3at6I733dONgust+zjhQWES/NBbM1Jqa/PELLiYexROt6MMquMBdwbO2k4yZl59Td7g==",
+      "type": "package",
+      "path": "serilog.sinks.rollingfile/3.3.1-dev-00771",
+      "files": [
+        "lib/net45/Serilog.Sinks.RollingFile.dll",
+        "lib/net45/Serilog.Sinks.RollingFile.xml",
+        "lib/netstandard1.3/Serilog.Sinks.RollingFile.dll",
+        "lib/netstandard1.3/Serilog.Sinks.RollingFile.xml",
+        "serilog.sinks.rollingfile.3.3.1-dev-00771.nupkg.sha512",
+        "serilog.sinks.rollingfile.nuspec"
       ]
     },
     "Serilog.Sinks.Splunk/3.0.0-dev-00217": {
@@ -12918,27 +12978,31 @@
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.0",
       "Newtonsoft.Json >= 11.0.2",
       "Serilog >= 2.7.2-dev-01010",
+      "Serilog.Sinks.RollingFile >= 3.3.1-dev-00771",
       "Serilog.Sinks.Splunk >= 3.0.0-dev-00217"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gosha\\.nuget\\packages\\": {},
+    "C:\\Users\\Ded\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
-      "projectUniqueName": "D:\\Documents\\Message Manager\\MessageManager\\Backend\\MessageManager\\MessageManager\\MessageManagerWebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Ded\\Desktop\\MISIS\\MessageManager\\Backend\\MessageManager\\MessageManager\\MessageManagerWebAPI.csproj",
       "projectName": "MessageManagerWebAPI",
-      "projectPath": "D:\\Documents\\Message Manager\\MessageManager\\Backend\\MessageManager\\MessageManager\\MessageManagerWebAPI.csproj",
-      "packagesPath": "C:\\Users\\gosha\\.nuget\\packages\\",
-      "outputPath": "D:\\Documents\\Message Manager\\MessageManager\\Backend\\MessageManager\\MessageManager\\obj\\",
+      "projectPath": "C:\\Users\\Ded\\Desktop\\MISIS\\MessageManager\\Backend\\MessageManager\\MessageManager\\MessageManagerWebAPI.csproj",
+      "packagesPath": "C:\\Users\\Ded\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ded\\Desktop\\MISIS\\MessageManager\\Backend\\MessageManager\\MessageManager\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\gosha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ded\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12951,8 +13015,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "D:\\Documents\\Message Manager\\MessageManager\\Backend\\MessageManager\\MessageManagerLib\\MessageManagerLib.csproj": {
-              "projectPath": "D:\\Documents\\Message Manager\\MessageManager\\Backend\\MessageManager\\MessageManagerLib\\MessageManagerLib.csproj"
+            "C:\\Users\\Ded\\Desktop\\MISIS\\MessageManager\\Backend\\MessageManager\\MessageManagerLib\\MessageManagerLib.csproj": {
+              "projectPath": "C:\\Users\\Ded\\Desktop\\MISIS\\MessageManager\\Backend\\MessageManager\\MessageManagerLib\\MessageManagerLib.csproj"
             }
           }
         }
@@ -12966,30 +13030,34 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.All": {
-            "target": "Package",
-            "version": "[2.0.3, )"
-          },
-          "Microsoft.NETCore.App": {
-            "target": "Package",
-            "version": "[2.0.0, )",
-            "autoReferenced": true
-          },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
-            "version": "[2.0.0, )"
+            "version": "2.0.0"
           },
-          "Newtonsoft.Json": {
+          "Serilog.Sinks.RollingFile": {
             "target": "Package",
-            "version": "[11.0.2, )"
+            "version": "3.3.1-dev-00771"
           },
           "Serilog": {
             "target": "Package",
-            "version": "[2.7.2-dev-01010, )"
+            "version": "2.7.2-dev-01010"
+          },
+          "Microsoft.NETCore.App": {
+            "target": "Package",
+            "version": "2.0",
+            "autoReferenced": true
           },
           "Serilog.Sinks.Splunk": {
             "target": "Package",
-            "version": "[3.0.0-dev-00217, )"
+            "version": "3.0.0-dev-00217"
+          },
+          "Microsoft.AspNetCore.All": {
+            "target": "Package",
+            "version": "2.0.3"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "11.0.2"
           }
         },
         "imports": [

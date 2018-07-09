@@ -1,4 +1,5 @@
-﻿using MessageManagerLib.Application;
+﻿using MessageManager.Filters;
+using MessageManagerLib.Application;
 using MessageManagerLib.Domain;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -8,7 +9,6 @@ using Serilog;
 using Serilog.Events;
 using MessageManagerLib.Infrastructure;
 using MessageManagerLib.Domain.Exceptions;
-using MessageManagerWebAPI.Filters;
 
 namespace MessageManager
 {
