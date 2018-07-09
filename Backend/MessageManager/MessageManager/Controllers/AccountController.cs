@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MessageManager.Models.AccountModels;
+using MessageManagerLib.Domain;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,14 +13,16 @@ namespace MessageManagerWebAPI.Controllers
   [Route("api/account")]
   public class AccountController : Controller
   {
-    public AccountController()
+    public AccountController(IUserService userService)
     {
+      _userService = userService;
     }
 
     [HttpPost]
     [Route("registration")]
     public IActionResult Registration([FromBody] RegistrationModel registrationModel)
     {
+      
       return Ok();
     }
 
@@ -29,5 +32,7 @@ namespace MessageManagerWebAPI.Controllers
     {
       return Ok();
     }
+
+    private readonly IUserService _userService;
   }
 }

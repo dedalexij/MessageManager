@@ -9,3 +9,5 @@ C:\Users\Ded\Desktop\MISIS\MessageManager\Backend\MessageManager\MessageManager\
 C:\Users\Ded\Desktop\MISIS\MessageManager\Backend\MessageManager\MessageManager\obj\Debug\netcoreapp2.0\MessageManagerWebAPI.AssemblyInfo.cs
 C:\Users\Ded\Desktop\MISIS\MessageManager\Backend\MessageManager\MessageManager\obj\Debug\netcoreapp2.0\MessageManagerWebAPI.dll
 C:\Users\Ded\Desktop\MISIS\MessageManager\Backend\MessageManager\MessageManager\obj\Debug\netcoreapp2.0\MessageManagerWebAPI.pdb
+C:\Users\Ded\Desktop\MISIS\MessageManager\Backend\MessageManager\MessageManager\bin\Debug\netcoreapp2.0\MessageManagerLib.dll
+C:\Users\Ded\Desktop\MISIS\MessageManager\Backend\MessageManager\MessageManager\bin\Debug\netcoreapp2.0\MessageManagerLib.pdb
