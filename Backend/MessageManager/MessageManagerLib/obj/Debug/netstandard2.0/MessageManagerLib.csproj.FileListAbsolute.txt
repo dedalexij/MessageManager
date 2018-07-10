@@ -7,3 +7,12 @@ C:\Users\Ded\Desktop\MISIS\MessageManager\Backend\MessageManager\MessageManagerL
 C:\Users\Ded\Desktop\MISIS\MessageManager\Backend\MessageManager\MessageManagerLib\obj\Debug\netstandard2.0\MessageManagerLib.AssemblyInfo.cs
 C:\Users\Ded\Desktop\MISIS\MessageManager\Backend\MessageManager\MessageManagerLib\obj\Debug\netstandard2.0\MessageManagerLib.dll
 C:\Users\Ded\Desktop\MISIS\MessageManager\Backend\MessageManager\MessageManagerLib\obj\Debug\netstandard2.0\MessageManagerLib.pdb
+D:\Documents\Message Manager\MessageManager\Backend\MessageManager\MessageManagerLib\bin\Debug\netstandard2.0\MessageManagerLib.deps.json
+D:\Documents\Message Manager\MessageManager\Backend\MessageManager\MessageManagerLib\bin\Debug\netstandard2.0\MessageManagerLib.dll
+D:\Documents\Message Manager\MessageManager\Backend\MessageManager\MessageManagerLib\bin\Debug\netstandard2.0\MessageManagerLib.pdb
+D:\Documents\Message Manager\MessageManager\Backend\MessageManager\MessageManagerLib\obj\Debug\netstandard2.0\MessageManagerLib.csprojAssemblyReference.cache
+D:\Documents\Message Manager\MessageManager\Backend\MessageManager\MessageManagerLib\obj\Debug\netstandard2.0\MessageManagerLib.csproj.CoreCompileInputs.cache
+D:\Documents\Message Manager\MessageManager\Backend\MessageManager\MessageManagerLib\obj\Debug\netstandard2.0\MessageManagerLib.AssemblyInfoInputs.cache
+D:\Documents\Message Manager\MessageManager\Backend\MessageManager\MessageManagerLib\obj\Debug\netstandard2.0\MessageManagerLib.AssemblyInfo.cs
+D:\Documents\Message Manager\MessageManager\Backend\MessageManager\MessageManagerLib\obj\Debug\netstandard2.0\MessageManagerLib.dll
+D:\Documents\Message Manager\MessageManager\Backend\MessageManager\MessageManagerLib\obj\Debug\netstandard2.0\MessageManagerLib.pdb

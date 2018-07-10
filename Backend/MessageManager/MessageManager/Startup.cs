@@ -50,7 +50,6 @@ namespace MessageManager
                    .MinimumLevel.Information()
                    .MinimumLevel.Override("Microsoft", LogEventLevel.Debug)
                    .Enrich.FromLogContext()
-                   .WriteTo.RollingFile("log-{Date}.log")
                    .CreateLogger();
             Log.Information("Logging started");
         }

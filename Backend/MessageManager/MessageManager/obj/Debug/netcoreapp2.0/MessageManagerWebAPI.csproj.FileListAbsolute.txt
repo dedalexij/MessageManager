@@ -11,3 +11,17 @@ C:\Users\Ded\Desktop\MISIS\MessageManager\Backend\MessageManager\MessageManager\
 C:\Users\Ded\Desktop\MISIS\MessageManager\Backend\MessageManager\MessageManager\obj\Debug\netcoreapp2.0\MessageManagerWebAPI.pdb
 C:\Users\Ded\Desktop\MISIS\MessageManager\Backend\MessageManager\MessageManager\bin\Debug\netcoreapp2.0\MessageManagerLib.dll
 C:\Users\Ded\Desktop\MISIS\MessageManager\Backend\MessageManager\MessageManager\bin\Debug\netcoreapp2.0\MessageManagerLib.pdb
+D:\Documents\Message Manager\MessageManager\Backend\MessageManager\MessageManager\obj\Debug\netcoreapp2.0\MessageManagerWebAPI.csprojAssemblyReference.cache
+D:\Documents\Message Manager\MessageManager\Backend\MessageManager\MessageManager\obj\Debug\netcoreapp2.0\MessageManagerWebAPI.csproj.CoreCompileInputs.cache
+D:\Documents\Message Manager\MessageManager\Backend\MessageManager\MessageManager\obj\Debug\netcoreapp2.0\MessageManagerWebAPI.AssemblyInfoInputs.cache
+D:\Documents\Message Manager\MessageManager\Backend\MessageManager\MessageManager\obj\Debug\netcoreapp2.0\MessageManagerWebAPI.AssemblyInfo.cs
+D:\Documents\Message Manager\MessageManager\Backend\MessageManager\MessageManager\obj\Debug\netcoreapp2.0\MessageManagerWebAPI.dll
+D:\Documents\Message Manager\MessageManager\Backend\MessageManager\MessageManager\obj\Debug\netcoreapp2.0\MessageManagerWebAPI.pdb
+D:\Documents\Message Manager\MessageManager\Backend\MessageManager\MessageManager\bin\Debug\netcoreapp2.0\MessageManagerWebAPI.deps.json
+D:\Documents\Message Manager\MessageManager\Backend\MessageManager\MessageManager\bin\Debug\netcoreapp2.0\MessageManagerWebAPI.runtimeconfig.json
+D:\Documents\Message Manager\MessageManager\Backend\MessageManager\MessageManager\bin\Debug\netcoreapp2.0\MessageManagerWebAPI.runtimeconfig.dev.json
+D:\Documents\Message Manager\MessageManager\Backend\MessageManager\MessageManager\bin\Debug\netcoreapp2.0\MessageManagerWebAPI.dll
+D:\Documents\Message Manager\MessageManager\Backend\MessageManager\MessageManager\bin\Debug\netcoreapp2.0\MessageManagerWebAPI.pdb
+D:\Documents\Message Manager\MessageManager\Backend\MessageManager\MessageManager\bin\Debug\netcoreapp2.0\MessageManagerLib.dll
+D:\Documents\Message Manager\MessageManager\Backend\MessageManager\MessageManager\bin\Debug\netcoreapp2.0\MessageManagerLib.pdb
+D:\Documents\Message Manager\MessageManager\Backend\MessageManager\MessageManager\obj\Debug\netcoreapp2.0\MessageManagerWebAPI.csproj.CopyComplete

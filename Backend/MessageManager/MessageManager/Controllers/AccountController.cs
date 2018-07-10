@@ -22,7 +22,12 @@ namespace MessageManagerWebAPI.Controllers
     [Route("registration")]
     public IActionResult Registration([FromBody] RegistrationModel registrationModel)
     {
-      
+            var newUser = new User(registrationModel.FirstName, 
+                registrationModel.LastName, 
+                registrationModel.Email, 
+                registrationModel.Password);
+
+            _userService.RegisterUser(newUser);
       return Ok();
     }
 
