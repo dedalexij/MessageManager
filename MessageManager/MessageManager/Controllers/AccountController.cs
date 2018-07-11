@@ -35,6 +35,8 @@ namespace MessageManagerWebAPI.Controllers
     [Route("login")]
     public IActionResult Login([FromBody] LoginModel loginModel)
     {
+            var User = new LoginModel();
+            
       return Ok();
     }
 
