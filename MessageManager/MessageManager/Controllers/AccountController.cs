@@ -35,7 +35,9 @@ namespace MessageManagerWebAPI.Controllers
     [Route("login")]
     public IActionResult Login([FromBody] LoginModel loginModel)
     {
-            var User = new LoginModel();
+            var login = loginModel.Email;
+            var pswd = loginModel.Password;
+            var answ = CheckLogin(login, pswd);
             
       return Ok();
     }
