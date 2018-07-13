@@ -1,4 +1,6 @@
-﻿using MessageManager.Filters;
+﻿using System;
+using MessageManager.Filters;
+using MessageManager.Security;
 using MessageManagerLib.Application;
 using MessageManagerLib.Domain;
 using Microsoft.AspNetCore.Builder;
@@ -25,8 +27,12 @@ namespace MessageManager
     public void ConfigureServices(IServiceCollection services)
     {
       ConfigureLogging();
-      services.AddMvc();
+      services.AddMvc(options =>
+      {
+        options.Filters.Add(new ActionFilter());
+      });
 
+      var securityConfiguration = Configuration.GetSection("Security");
       var userRepository = new UserRepository();
       var userService = new UserService(userRepository);
       var smsRepository = new SMSRepository();
@@ -36,6 +42,13 @@ namespace MessageManager
       services.AddSingleton<IUserService>(userService);
       services.AddSingleton<IMessageService>(messageService);
       services.AddSingleton<ExceptionFilter>(new ExceptionFilter());
+      services.AddSingleton<ActionFilter>(new ActionFilter());
+
+      var securitySettings = new SecuritySettings(securityConfiguration["EncryptionKey"],
+        securityConfiguration["Issue"],
+        securityConfiguration.GetValue<TimeSpan>("ExpirationPeriod"));
+
+      var jwtIssuer = new JwtIssuer(securitySettings);
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,6 +68,7 @@ namespace MessageManager
              .MinimumLevel.Information()
              .MinimumLevel.Override("Microsoft", LogEventLevel.Debug)
              .Enrich.FromLogContext()
+             .WriteTo.RollingFile("log-{Date}.log")
              .CreateLogger();
       Log.Information("Logging started");
     }
