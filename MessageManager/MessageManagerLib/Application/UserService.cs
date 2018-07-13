@@ -15,6 +15,11 @@ namespace MessageManagerLib.Application
       _userRepository.AddUser(newUser);
     }
 
+    public bool CheckLogin(string email, string password)
+    {
+      return _userRepository.CheckLogin(email, password);
+    }
+
     private readonly IUserRepository _userRepository;
   }
 }

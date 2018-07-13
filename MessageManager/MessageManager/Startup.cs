@@ -30,6 +30,7 @@ namespace MessageManager
       services.AddMvc(options =>
       {
         options.Filters.Add(new ActionFilter());
+        options.Filters.Add(new ExceptionFilter());
       });
 
       var securityConfiguration = Configuration.GetSection("Security");
