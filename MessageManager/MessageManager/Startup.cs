@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using MessageManager.Filters;
 using MessageManager.Security;
 using MessageManagerLib.Application;
@@ -11,6 +12,8 @@ using Serilog;
 using Serilog.Events;
 using MessageManagerLib.Infrastructure;
 using MessageManagerLib.Domain.Exceptions;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 
 namespace MessageManager
 {
@@ -50,6 +53,23 @@ namespace MessageManager
         securityConfiguration.GetValue<TimeSpan>("ExpirationPeriod"));
 
       var jwtIssuer = new JwtIssuer(securitySettings);
+
+      services.AddSingleton<IJwtIssuer>(jwtIssuer);
+
+      services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+        .AddJwtBearer(options =>
+        {
+          options.TokenValidationParameters = new TokenValidationParameters
+          {
+            ValidateIssuer = false,
+            ValidateAudience = false,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ClockSkew = TimeSpan.Zero,
+            IssuerSigningKey = new SymmetricSecurityKey(
+              Encoding.UTF8.GetBytes(securitySettings.EncryptionKey))
+          };
+        });
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

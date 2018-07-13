@@ -6,7 +6,7 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace MessageManager.Security
 {
-  public class JwtIssuer
+  public class JwtIssuer : IJwtIssuer
   {
     private readonly SecuritySettings _securitySettings;
 

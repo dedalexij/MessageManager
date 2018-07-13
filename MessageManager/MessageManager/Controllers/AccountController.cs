@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MessageManager.Models.AccountModels;
+using MessageManager.Security;
 using MessageManagerLib.Domain;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -12,7 +13,7 @@ namespace MessageManagerWebAPI.Controllers
   [Route("api/account")]
   public class AccountController : Controller
   {
-    public AccountController(IUserService userService)
+    public AccountController(IUserService userService, IJwtIssuer jwtIssuer)
     {
       _userService = userService;
     }
@@ -27,7 +28,9 @@ namespace MessageManagerWebAPI.Controllers
           registrationModel.Password);
 
       _userService.RegisterUser(newUser);
-      return Ok();
+
+      var token = _jwtIssuer.IssueJwt(registrationModel.Email);
+      return Ok(token);
     }
 
     [HttpPost]
@@ -42,9 +45,12 @@ namespace MessageManagerWebAPI.Controllers
       {
         return BadRequest();
       }
-      return Ok();
+
+      var token = _jwtIssuer.IssueJwt(loginModel.Email);
+      return Ok(token);
     }
 
     private readonly IUserService _userService;
+    private readonly IJwtIssuer _jwtIssuer;
   }
 }
