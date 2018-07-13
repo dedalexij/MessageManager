@@ -2,9 +2,9 @@
 
 namespace MessageManagerLib.Domain
 {
-  public interface IUserRepository
-  {
-    void AddUser(User newUser);
-    List<User> UserCollection { get; }
-  }
+    public interface IUserRepository
+    {
+        void AddUser(User newUser);
+        List<User> UserCollection { get; }
+    }
 }

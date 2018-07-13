@@ -9,39 +9,45 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MessageManagerWebAPI.Controllers
 {
-  [Produces("application/json")]
-  [Route("api/account")]
-  public class AccountController : Controller
-  {
-    public AccountController(IUserService userService)
+    [Produces("application/json")]
+    [Route("api/account")]
+    public class AccountController : Controller
     {
-      _userService = userService;
-    }
+        public AccountController(IUserService userService)
+        {
+            _userService = userService;
+        }
 
-    [HttpPost]
-    [Route("registration")]
-    public IActionResult Registration([FromBody] RegistrationModel registrationModel)
-    {
-            var newUser = new User(registrationModel.FirstName, 
-                registrationModel.LastName, 
-                registrationModel.Email, 
+        [HttpPost]
+        [Route("registration")]
+        public IActionResult Registration([FromBody] RegistrationModel registrationModel)
+        {
+            var newUser = new User(registrationModel.FirstName,
+                registrationModel.LastName,
+                registrationModel.Email,
                 registrationModel.Password);
 
             _userService.RegisterUser(newUser);
-      return Ok();
-    }
+            return Ok();
+        }
 
-    [HttpPost]
-    [Route("login")]
-    public IActionResult Login([FromBody] LoginModel loginModel)
-    {
+        [HttpPost]
+        [Route("login")]
+        public IActionResult Login([FromBody] LoginModel loginModel)
+        {
             var login = loginModel.Email;
             var pswd = loginModel.Password;
-            var answ = CheckLogin(login, pswd);
-            
-      return Ok();
-    }
+            var answ = _userService.CheckLogin(login, pswd);
+            if (answ == false)
+            {
+                return BadRequest();
+            }
+            else
+            {
+                return Ok();
+            }
+        }
 
-    private readonly IUserService _userService;
-  }
+        private readonly IUserService _userService;
+    }
 }
