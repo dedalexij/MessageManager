@@ -12,8 +12,8 @@ namespace MessageManagerLib.Domain
       MessageText = messageText ?? throw new ArgumentNullException(nameof(messageText));
     }
 
-    public Guid Id { get; private set; }
-    public List<string> RecipientNumbers { get; private set; }
-    public string MessageText { get; private set; }
+    public Guid Id { get; }
+    public List<string> RecipientNumbers { get; }
+    public string MessageText { get; }
   }
 }

@@ -9,7 +9,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MessageManagerWebAPI.Controllers
 {
-  [Produces("application/json")]
   [Route("api/account")]
   public class AccountController : Controller
   {
@@ -20,7 +19,7 @@ namespace MessageManagerWebAPI.Controllers
 
     [HttpPost]
     [Route("registration")]
-    public IActionResult Registration([FromBody] RegistrationModel registrationModel)
+    public IActionResult Registration(RegistrationModel registrationModel)
     {
             var newUser = new User(registrationModel.FirstName, 
                 registrationModel.LastName, 
@@ -33,7 +32,7 @@ namespace MessageManagerWebAPI.Controllers
 
     [HttpPost]
     [Route("login")]
-    public IActionResult Login([FromBody] LoginModel loginModel)
+    public IActionResult Login([FromForm] LoginModel loginModel)
     {
       return Ok();
     }
