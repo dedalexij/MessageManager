@@ -7,6 +7,7 @@ using MessageManagerLib.Domain;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Rest;
 
 namespace MessageManagerWebAPI.Controllers
 {
@@ -35,7 +36,8 @@ namespace MessageManagerWebAPI.Controllers
       var email = new Email(emailModel.Id, 
         emailModel.SenderAddress, 
         emailModel.RecipientAddresses, 
-        emailModel.SubjectText, emailModel.BodyText);
+        emailModel.SubjectText, emailModel.BodyText, 
+        emailModel.File.OpenReadStream(), emailModel.File.ContentType);
 
       _messageService.SendEmail(email);
       return Ok();
@@ -57,7 +59,8 @@ namespace MessageManagerWebAPI.Controllers
       var email = new Email(emailModel.Id,
         emailModel.SenderAddress,
         emailModel.RecipientAddresses,
-        emailModel.SubjectText, emailModel.BodyText);
+        emailModel.SubjectText, emailModel.BodyText,
+        emailModel.File.OpenReadStream(), emailModel.File.ContentType);
 
       _messageService.AddMailToQueue(email);
       return Ok();

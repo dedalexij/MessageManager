@@ -9,5 +9,6 @@ namespace MessageManagerLib.Domain
     Email GetNextMail();
     void AddMailToUnsent(Email email);
     Email GetUnsentMail(Guid id);
+    bool HasNext();
   }
 }

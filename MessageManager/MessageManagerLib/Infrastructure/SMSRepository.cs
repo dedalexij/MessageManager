@@ -40,6 +40,11 @@ namespace MessageManagerLib.Infrastructure
       return sms;
     }
 
+    public bool HasNext()
+    {
+      return _smsQueue.Count != 0;
+    }
+
     private readonly List<SMS> _unsentMessages;
     private readonly Queue<SMS> _smsQueue;
   }

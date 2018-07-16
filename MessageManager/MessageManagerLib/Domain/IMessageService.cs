@@ -6,5 +6,7 @@
     void SendEmail(Email email);
     void AddSmsToQueue(SMS sms);
     void AddMailToQueue(Email email);
+    void SendSmsFromQueue();
+    void SendEmailFromQueue();
   }
 }

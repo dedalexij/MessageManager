@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageManagerWebAPI", "MessageManager\MessageManagerWebAPI.csproj", "{D32964E5-9689-4DE9-B906-66A0B5DC0383}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MessageManagerWebAPI", "MessageManager\MessageManagerWebAPI.csproj", "{D32964E5-9689-4DE9-B906-66A0B5DC0383}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageManagerLib", "MessageManagerLib\MessageManagerLib.csproj", "{C120B391-31D0-481C-8033-A410E5E5096C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MessageManagerLib", "MessageManagerLib\MessageManagerLib.csproj", "{C120B391-31D0-481C-8033-A410E5E5096C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageManagerUnitTests", "MessafeManagerUnitTests\MessageManagerUnitTests.csproj", "{77F6A929-C49E-4700-AF15-C99830CA5B75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{C120B391-31D0-481C-8033-A410E5E5096C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C120B391-31D0-481C-8033-A410E5E5096C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C120B391-31D0-481C-8033-A410E5E5096C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77F6A929-C49E-4700-AF15-C99830CA5B75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77F6A929-C49E-4700-AF15-C99830CA5B75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77F6A929-C49E-4700-AF15-C99830CA5B75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77F6A929-C49E-4700-AF15-C99830CA5B75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

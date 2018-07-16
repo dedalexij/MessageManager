@@ -8,5 +8,6 @@ namespace MessageManagerLib.Domain
     SMS GetNextSms();
     void AddSmsToUnsent(SMS sms);
     SMS GetUnsentSms(Guid id);
+    bool HasNext();
   }
 }

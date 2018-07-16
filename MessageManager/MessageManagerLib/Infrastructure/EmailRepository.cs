@@ -42,6 +42,11 @@ namespace MessageManagerLib.Infrastructure
       return email;
     }
 
+    public bool HasNext()
+    {
+      return _emailQueue.Count != 0;
+    }
+
     private readonly List<Email> _unsentMessages;
     private readonly Queue<Email> _emailQueue;
   }

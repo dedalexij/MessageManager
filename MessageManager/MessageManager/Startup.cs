@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 using MessageManager.Filters;
 using MessageManager.Security;
 using MessageManagerLib.Application;
@@ -11,7 +13,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Serilog;
 using Serilog.Events;
 using MessageManagerLib.Infrastructure;
-using MessageManagerLib.Domain.Exceptions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 
@@ -70,6 +71,8 @@ namespace MessageManager
               Encoding.UTF8.GetBytes(securitySettings.EncryptionKey))
           };
         });
+
+      StartSendingMessage(messageService);
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -92,6 +95,29 @@ namespace MessageManager
              .WriteTo.RollingFile("log-{Date}.log")
              .CreateLogger();
       Log.Information("Logging started");
+    }
+
+    public void StartSendingMessage(IMessageService messageService)
+    {
+      new Task(() => 
+      {
+        while (true)
+        {
+          Log.Information("another thread");
+          Thread.Sleep(1000);
+          messageService.SendEmailFromQueue();
+        }
+      }).Start();
+
+      new Task(() =>
+      {
+        while (true)
+        {
+          Log.Information("another thread");
+          Thread.Sleep(1000);
+          messageService.SendSmsFromQueue();
+        }
+      }).Start();
     }
   }
 }
