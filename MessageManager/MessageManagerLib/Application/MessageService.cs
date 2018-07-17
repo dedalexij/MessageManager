@@ -5,7 +5,6 @@ using MessageManagerLib.Domain;
 using MessageManagerLib.Massages;
 using Newtonsoft.Json;
 using RestSharp;
-using RestSharp.Serializers;
 
 namespace MessageManagerLib.Application
 {
@@ -37,6 +36,7 @@ namespace MessageManagerLib.Application
       request.AddParameter("application/json", jsonSms, ParameterType.RequestBody);
 
       IRestResponse response = client.Execute(request);
+
     }
 
     public void SendEmail(Email email)
@@ -44,7 +44,7 @@ namespace MessageManagerLib.Application
       var client = new SmtpClient();
       var message = new MailMessage();
 
-      message.Sender = new MailAddress("address");
+      message.Sender = new MailAddress("a@a.com");
       message.Body = email.BodyText;
       message.Subject = email.SubjectText;
       message.Attachments.Add(email.Attachment_);

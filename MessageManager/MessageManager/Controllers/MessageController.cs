@@ -11,7 +11,7 @@ using Rest;
 
 namespace MessageManagerWebAPI.Controllers
 {
-  [Authorize]
+  //[Authorize]
   [Route("api/message")]
   public class MessageController : Controller
   {
@@ -20,16 +20,18 @@ namespace MessageManagerWebAPI.Controllers
       _messageService = messageService;
     }
 
-    [HttpPut]
+    [HttpPost]
     [Route("send/sms")]
     public IActionResult SendSms(SmsModel smsModel)
     {
       var sms = new SMS(smsModel.Id, smsModel.RecipientNumbers, smsModel.MessageText);
-      _messageService.SendSms(sms);
+      if (smsModel.Queue)
+        _messageService.AddSmsToQueue(sms);
+      else _messageService.SendSms(sms);
       return Ok();
     }
 
-    [HttpPut]
+    [HttpPost]
     [Route("send/email")]
     public IActionResult SendEmail(EmailModel emailModel)
     {
@@ -39,7 +41,9 @@ namespace MessageManagerWebAPI.Controllers
         emailModel.SubjectText, emailModel.BodyText, 
         emailModel.File.OpenReadStream(), emailModel.File.ContentType);
 
-      _messageService.SendEmail(email);
+      if (emailModel.Queue)
+        _messageService.AddMailToQueue(email);
+      else _messageService.SendEmail(email);
       return Ok();
     }
 

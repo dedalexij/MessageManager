@@ -21,7 +21,7 @@ namespace MessageManagerLib.Infrastructure
       }
       else
       {
-        throw new UserAlreadyExistsException("User already exists");
+        //throw new UserAlreadyExistsException("User already exists");
       }
     }
 

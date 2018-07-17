@@ -13,5 +13,6 @@ namespace MessageManager.Models.MessageModels
     public string SubjectText { get; set; }
     public string BodyText { get; set; }
     public IFormFile File { get; set; }
+    public bool Queue { get; set; }
   }
 }

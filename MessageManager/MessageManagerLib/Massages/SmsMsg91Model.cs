@@ -4,18 +4,19 @@ using Newtonsoft.Json;
 
 namespace MessageManagerLib.Massages
 {
+  [JsonObject]
   public class SmsMsg91Model
   {
-    [Newtonsoft.Json.JsonProperty(PropertyName = "sender")]
+    [JsonProperty(PropertyName = "sender")]
     public string Sender { get; set; }
 
-    [Newtonsoft.Json.JsonProperty(PropertyName = "route")]
+    [JsonProperty(PropertyName = "route")]
     public string Route { get; set; }
 
-    [Newtonsoft.Json.JsonProperty(PropertyName = "country")]
+    [JsonProperty(PropertyName = "country")]
     public string Country { get; set; }
 
-    [Newtonsoft.Json.JsonProperty(PropertyName = "sms")]
+    [JsonProperty("sms")]
     public List<SMS> Sms { get; set; }
   }
 }

@@ -14,8 +14,10 @@ namespace MessageManager.Filters
         Log.Warning(context.ActionDescriptor.DisplayName + "model is not valid");
       }
 
-      Log.Verbose("Received Arguments {@Arguments}", context.ActionArguments);
-
+      Log.Information("Received Arguments {@Arguments}", context.ActionArguments);
+      Log.Information("request " + context.HttpContext.Request.Form.Files);
+      Log.Information("route data " + context.RouteData.Values);
+      Log.Information("http context" + context.HttpContext);
       var ip = context.HttpContext.Request.Host.Host;
 
       Log.Information("Request: {@Values} ip: {@IPAdress} ",

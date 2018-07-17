@@ -103,7 +103,6 @@ namespace MessageManager
       {
         while (true)
         {
-          Log.Information("another thread");
           Thread.Sleep(1000);
           messageService.SendEmailFromQueue();
         }
@@ -113,7 +112,6 @@ namespace MessageManager
       {
         while (true)
         {
-          Log.Information("another thread");
           Thread.Sleep(1000);
           messageService.SendSmsFromQueue();
         }

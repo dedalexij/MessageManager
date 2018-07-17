@@ -16,6 +16,7 @@ namespace MessageManagerWebAPI.Controllers
     public AccountController(IUserService userService, IJwtIssuer jwtIssuer)
     {
       _userService = userService;
+      _jwtIssuer = jwtIssuer;
     }
 
     [HttpPost]

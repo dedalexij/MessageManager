@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 
 namespace MessageManagerLib.Domain
 {
+  [JsonObject(MemberSerialization.OptIn)]
   public class SMS
   {
     public SMS(Guid id, List<string> recipientNumbers, string messageText)
@@ -12,13 +13,14 @@ namespace MessageManagerLib.Domain
       RecipientNumbers = recipientNumbers ?? throw new ArgumentNullException(nameof(recipientNumbers));
       MessageText = messageText ?? throw new ArgumentNullException(nameof(messageText));
     }
+
     [JsonIgnore]
     public Guid Id { get; }
 
-    [JsonPropertyAttribute(PropertyName = "to")]
+    [JsonProperty("to")]
     public List<string> RecipientNumbers { get; }
 
-    [Newtonsoft.Json.JsonProperty("message")]
+    [JsonProperty("message")]
     public string MessageText { get; }
   }
 }
