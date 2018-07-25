@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -38,11 +39,15 @@ namespace MessageManager
       });
 
       var securityConfiguration = Configuration.GetSection("Security");
+      var emailCredentialsConfiguration = Configuration.GetSection("EmailCredatials");
+
+      var emailCredatials = new NetworkCredential(emailCredentialsConfiguration["Address"],
+        emailCredentialsConfiguration["Password"]);
       var userRepository = new UserRepository();
       var userService = new UserService(userRepository);
       var smsRepository = new SMSRepository();
       var emailRepository = new EmailRepository();
-      var messageService = new MessageService(emailRepository, smsRepository);
+      var messageService = new MessageService(emailRepository, smsRepository, emailCredatials);
 
       services.AddSingleton<IUserService>(userService);
       services.AddSingleton<IMessageService>(messageService);
