@@ -18,6 +18,10 @@ namespace MessageManagerLib.Application
       this._emailCredential = credential ?? throw new ArgumentNullException(nameof(credential));
     }
 
+    /// <summary>
+    /// Sends a message to the specified phone number
+    /// </summary>
+    /// <param name="sms"></param>
     public void SendSms(SMS sms)
     {
       var client = new RestClient("http://api.msg91.com/api/v2/sendsms");
@@ -41,6 +45,10 @@ namespace MessageManagerLib.Application
 
     }
 
+    /// <summary>
+    /// Sends a message to the specified email address
+    /// </summary>
+    /// <param name="email"></param>
     public void SendEmail(Email email)
     {
       var client = new SmtpClient();
@@ -61,6 +69,9 @@ namespace MessageManagerLib.Application
 
     }
 
+    /// <summary>
+    /// Sends a message from queue to the specified phone number
+    /// </summary>
     public void SendSmsFromQueue()
     {
       if (_smsRepository.HasNext())
@@ -69,6 +80,9 @@ namespace MessageManagerLib.Application
       }
     }
 
+    /// <summary>
+    /// Sends a message from queue to the specified email address
+    /// </summary>
     public void SendEmailFromQueue()
     {
       if (_emailRepository.HasNext())
@@ -77,18 +91,37 @@ namespace MessageManagerLib.Application
       }
     }
 
+    /// <summary>
+    /// Adds sms to the queue
+    /// </summary>
+    /// <param name="sms"></param>
     public void AddSmsToQueue(SMS sms)
     {
       _smsRepository.AddSmsToQueue(sms);
     }
 
+    /// <summary>
+    /// Adds mail to the queue
+    /// </summary>
+    /// <param name="email"></param>
     public void AddMailToQueue(Email email)
     {
       _emailRepository.AddMailToQueue(email);
     }
 
+    /// <summary>
+    /// Credentials for SMTP
+    /// </summary>
     private readonly NetworkCredential _emailCredential;
+
+    /// <summary>
+    /// Email repository
+    /// </summary>
     private readonly IEmailRepository _emailRepository;
+
+    /// <summary>
+    /// Sms repository
+    /// </summary>
     private readonly ISMSRepository _smsRepository;
   }
 }

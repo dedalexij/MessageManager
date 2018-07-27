@@ -4,6 +4,9 @@ using Newtonsoft.Json;
 
 namespace MessageManagerLib.Massages
 {
+  /// <summary>
+  /// Sms model for service msg91
+  /// </summary>
   [JsonObject]
   public class SmsMsg91Model
   {

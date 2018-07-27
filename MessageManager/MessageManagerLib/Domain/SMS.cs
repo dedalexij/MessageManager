@@ -14,12 +14,21 @@ namespace MessageManagerLib.Domain
       MessageText = messageText ?? throw new ArgumentNullException(nameof(messageText));
     }
 
+    /// <summary>
+    /// Guid of SMS message
+    /// </summary>
     [JsonIgnore]
     public Guid Id { get; }
 
+    /// <summary>
+    /// Message recipient numbers
+    /// </summary>
     [JsonProperty("to")]
     public List<string> RecipientNumbers { get; }
 
+    /// <summary>
+    /// SMS message text
+    /// </summary>
     [JsonProperty("message")]
     public string MessageText { get; }
   }

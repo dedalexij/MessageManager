@@ -1,8 +1,8 @@
 ﻿namespace MessageManagerLib.Domain
 {
-    public interface IUserService
-    {
-        void RegisterUser(User newUser);
-        bool CheckLogin(string email, string password);
-    }
+  public interface IUserService
+  {
+    void RegisterUser(User newUser);
+    bool Login(string email, string password);
+  }
 }

@@ -19,11 +19,34 @@ namespace MessageManagerLib.Domain
       BodyText = bodyText ?? throw new ArgumentNullException(nameof(bodyText));
     }
 
+    /// <summary>
+    /// Guid of email
+    /// </summary>
     public Guid Id { get; }
+
+    /// <summary>
+    /// E-mail address of the sender
+    /// </summary>
     public string SenderAddress { get; }
+
+    /// <summary>
+    /// Recipient email addresses
+    /// </summary>
     public List<string> RecipientAddresses { get; }
+
+    /// <summary>
+    /// Email header
+    /// </summary>
     public string SubjectText { get; }
+
+    /// <summary>
+    /// Email content
+    /// </summary>
     public string BodyText { get; }
+
+    /// <summary>
+    /// Email attachment
+    /// </summary>
     public Attachment Attachment_ { get; }
   }
 }

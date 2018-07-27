@@ -13,6 +13,10 @@ namespace MessageManagerLib.Infrastructure
       _userCollection = new List<User>();
     }
 
+    /// <summary>
+    /// Adds a new user to collection
+    /// </summary>
+    /// <param name="newUser"></param>
     public void AddUser(User newUser)
     {
       if (_userCollection.All(user => user.Email != newUser.Email))
@@ -21,10 +25,16 @@ namespace MessageManagerLib.Infrastructure
       }
       else
       {
-        //throw new UserAlreadyExistsException("User already exists");
+        throw new UserAlreadyExistsException("User already exists");
       }
     }
 
+    /// <summary>
+    /// Verifies the correctness of the entered data by the user during authorization
+    /// </summary>
+    /// <param name="email"></param>
+    /// <param name="password"></param>
+    /// <returns></returns>
     public bool CheckLogin(string email, string password)
     {
       if (_userCollection.Any(user => user.Email == email && user.Password == password))
@@ -33,6 +43,9 @@ namespace MessageManagerLib.Infrastructure
       return false;
     }
 
+    /// <summary>
+    /// Collection of user accounts
+    /// </summary>
     private readonly List<User> _userCollection;
   }
 }

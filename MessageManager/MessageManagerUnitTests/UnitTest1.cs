@@ -22,6 +22,7 @@ namespace MessageManagerUnitTests
       };
 
       var json = JsonConvert.SerializeObject(sms);
+
     }
   }
 }

@@ -40,7 +40,7 @@ namespace MessageManagerWebAPI.Controllers
     {
       var login = loginModel.Email;
       var pswd = loginModel.Password;
-      var answ = _userService.CheckLogin(login, pswd);
+      var answ = _userService.Login(login, pswd);
 
       if (!answ)
       {
